@@ -49,3 +49,8 @@ base_path = '/kaggle/input/pet-segmentation-dataset'
 
 images_path = os.path.join(base_path, 'image')
 masks_path  = os.path.join(base_path, 'mask')
+📁 project-root/
+ ┣ 📄 README.md            ← Project overview
+ ┣ 📓 model-working.ipynb  ← Model training, validation, and testing notebook
+ ┗ 📓 segmentation.ipynb   ← Segmentation pipeline and prediction visualization
+
