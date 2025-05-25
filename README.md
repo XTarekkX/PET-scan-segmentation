@@ -21,6 +21,8 @@ The goal is to accurately identify tumor regions from medical images using deep 
 
 ## 🖼️ Data & Preprocessing
 
+- **Number of Images**: `1067`
+- **Number of Masks**: `1067`
 - **Image Format**: RGB (3 channels), resized to `(640, 640)`
 - **Mask Format**: Binary (1 channel), resized to `(640, 640)`
 - **Unique Mask Values**: `[0.0, 1.0]`
@@ -29,49 +31,15 @@ The goal is to accurately identify tumor regions from medical images using deep 
 
 ---
 
-## ⚙️ Training Configuration
+## 📂 Dataset Information
 
-- **Learning Rate**: `1e-4`
-- **Batch Size**: `8` (Kaggle GPU memory optimized)
-- **Epochs**: `50`
-- **Early Stop Patience**: `7`
-- **LR Scheduler Patience**: `3`
-- **Data Loaders**: `num_workers = 2`
+The dataset used in this project is **manually collected from a hospital in Egypt** and represents **real-life clinical PET scan data**. It was anonymized and organized for academic research purposes.
 
----
+> ❗ **Disclaimer**: This dataset is intended **strictly for academic and research purposes**. **Any misuse, redistribution, or commercial application is not permitted and is not the responsibility of the authors.**
 
-## 🧪 Validation & Test Performance
+### Dataset Structure
+```python
+base_path = '/kaggle/input/pet-segmentation-dataset'
 
-| Metric        | Value    |
-|---------------|----------|
-| **Train Loss**    | `0.1309` |
-| **Val Loss**      | `0.1820` |
-| **Val IoU**       | `0.7789` |
-| **Test Loss**     | `0.1702` |
-| **Test IoU**      | `0.8025` |
-| **Test Dice**     | `0.8905` |
-
-> 🟢 Early stopping was triggered at **epoch 33**, ensuring optimal performance without overfitting.
-
----
-
-## 🔄 Augmentation Strategy
-
-Data augmentation was performed using the **Albumentations** library to enhance generalization:
-
-- Geometric transforms: rotate, flip, elastic deformation, grid distortion
-- Intensity transforms: brightness/contrast shift, blur
-- All inputs were normalized to ImageNet mean and std.
-
----
-
-## 📌 Future Improvements
-
-- Integrate volumetric (3D) PET data for more spatial context
-- Expand dataset diversity for better generalization
-- Deploy as a web-based inference tool for clinicians
-
----
-
-## 📁 Project Structure
-
+images_path = os.path.join(base_path, 'image')
+masks_path  = os.path.join(base_path, 'mask')
