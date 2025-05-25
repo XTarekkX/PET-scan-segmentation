@@ -33,9 +33,15 @@ The goal is to accurately identify tumor regions from medical images using deep 
 
 ## 📂 Dataset Information
 
-The dataset used in this project is **manually collected from a hospital in Egypt** and represents **real-life clinical PET scan data**. It was anonymized and organized for academic research purposes.
+The dataset used in this project is:
 
-> ❗ **Disclaimer**: This dataset is intended **strictly for academic and research purposes**. **Any misuse, redistribution, or commercial application is not permitted and is not the responsibility of the authors.**
+- 🏥 **Manually collected** from a hospital in **Egypt**, consisting of real-life 2D PET scan slices.
+- ✍️ **Manually annotated** using the **Roboflow platform** to generate binary tumor masks.
+
+> ❗ **Disclaimer**:
+> - The annotations were done **manually** for academic purposes and **are not performed by certified medical professionals**.
+> - The dataset is provided **strictly for academic and research use only**.
+> - Any **unauthorized usage, redistribution, or clinical/medical application is strictly prohibited** and **not the responsibility of the authors**.
 
 ### Dataset Structure
 ```python
