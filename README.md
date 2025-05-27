@@ -6,6 +6,11 @@ The goal is to accurately identify tumor regions from medical images using deep 
 
 ---
 
+## 🧠 Model Architecture
+
+> 📦 **Weights Resulted**:
+> https://drive.google.com/drive/folders/15A0v1cORPAyfY6hsy7XJYqxlDKh17QCL?usp=drive_link
+
 ## 🚀 Highlights
 
 - ✅ **Backbone**: ResNet34 (ImageNet weights)
